@@ -48,6 +48,11 @@ a{color:inherit}
 .pnl a span{flex:none;white-space:nowrap;font-size:1rem;line-height:1.4;color:#000;background:var(--c);padding:0 9px;border-radius:9px}
 .pnl a{transition:transform .12s ease}
 .pnl a:hover{transform:translateX(8px)}
+  .pnl a{transition:transform .12s ease} 
+.pnl a:hover{transform:translateX(8px)}
+.pnl a span{display:inline-block;transition:transform .12s ease, filter .12s ease}
+.pnl a:hover span{transform:translateY(-3px) rotate(-3deg) scale(1.1);filter:brightness(1.15)}
+.pnl a:active span{transform:translateY(1px) scale(.97)} 
 .feat .ft{display:inline-block;background:var(--or);font-size:1.3rem;padding:0 10px}
 .feat h2{font-size:2.5rem;margin:12px 0 10px}
 .feat p,.promo p{margin:0;color:#E0E0E0}
