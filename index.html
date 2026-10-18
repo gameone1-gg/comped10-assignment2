@@ -26,6 +26,18 @@ a{color:inherit}
 .play{font-size:2.2rem;color:#bbb;margin:20px 0 14px;text-transform:uppercase}
 .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .btn{font-size:1.7rem;text-transform:none;text-decoration:none;background:rgba(0,0,0,.55);border:3px solid var(--c);padding:6px 26px}
+.btn{
+  display:inline-block;
+  transition:transform .12s ease, background .12s ease;
+}
+.btn:hover{
+  transform:translateY(-8px) rotate(-3deg) scale(1.1);
+  background:var(--c);
+  color:#000;
+}
+.btn:active{
+  transform:translateY(1px) scale(.97);
+}
 .dash{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
 .pnl,.feat,.promo{background:rgba(0,0,0,.6);border-radius:10px;padding:16px;margin-bottom:14px}
 .pnl h2{font-size:2rem;margin-bottom:8px}
