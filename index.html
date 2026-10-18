@@ -177,4 +177,47 @@ footer{line-height:1.8}
 <div class="tg"><div class="tk" style="--c:#A64CFF"><h3>Reverse planning</h3><p>Plan it just like the military plans. Start from the end/ideal state - "is this website legal?" - then work backward through the what, the who and the where, until you reach the first step. The policy is that checklist, written by the maker.</p></div><div class="tk" style="--c:#F0483E"><h3>Do not be oblivious</h3><p>Convenience without human nuance is exactly what a one-tap "Agree" offers, and it works best on people who are oblivious. Do not be one of them. Read first, then tap.</p></div><div class="tk" style="--c:#F0509F"><h3>Who keeps the information</h3><p>Information flows through the keeper, the medium and the receiver. It has been decentralized: from radio, news, and etc. in the past, to content curated for you interconnected with the Internet. With more keepers than ever, the policy matters more, because it tells you who the keeper is.</p></div><div class="tk" style="--c:#29C5F6"><h3>Beyond digital literacy</h3><p>For example: Notice the same AI-made look everywhere in graphic designs (and in Multimedia itself) that loses credibility, and the “taong masa” who Agree (or not question) without a second thought - just like how they do in privacy policies. Critical thinking is more than digital literacy.</p></div></div>
 </main>
 <footer class="wrap"><br>Sources: Promise Legal (COPPA, June 2026); KPMG Law (Google Fonts, Sept 2022); Consently (session replay, July 2026) and Warner Norcross &amp; Judd; Prospeo (CAN-SPAM, 2026); American Bar Association (auto-renewal law, 2022); Jaburg Wilk (DMCA agent); <a href="https://mbasic.facebook.com/privacy/policy/printable/version/26776488768644674/" target="_blank" rel="noopener" style="color:var(--cy);text-decoration:underline">Meta Privacy Policy (effective July 23, 2026; covers Facebook, Instagram, Messenger and AI at Meta)</a>; TechCrunch and Open Terms Archive (AI update). Laws and policies change and court rulings differ, so this is general information, not legal advice. Check the live Meta Privacy Policy for its current version. The font is hosted inside this page, so it sends no visitor IP address to Google.</footer>
+<script>
+(function(){
+  var ctx;
+  function click(){
+    try{
+      ctx = ctx || new (window.AudioContext||window.webkitAudioContext)();
+      if(ctx.state==='suspended') ctx.resume();
+      var t = ctx.currentTime;
+
+      // short noise burst = the "clack"
+      var len = ctx.sampleRate*0.04;
+      var buf = ctx.createBuffer(1,len,ctx.sampleRate);
+      var d = buf.getChannelData(0);
+      for(var i=0;i<len;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3);
+      var src = ctx.createBufferSource(); src.buffer = buf;
+
+      var filter = ctx.createBiquadFilter();
+      filter.type='bandpass';
+      filter.frequency.value = 1800 + Math.random()*1200; // slight variation each time
+      filter.Q.value = 1.2;
+
+      var gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.35,t);
+      gain.gain.exponentialRampToValueAtTime(0.001,t+0.05);
+
+      src.connect(filter); filter.connect(gain); gain.connect(ctx.destination);
+      src.start(t);
+    }catch(e){}
+  }
+
+  var targets = '.btn, .pnl a, .src';
+  document.querySelectorAll(targets).forEach(function(el){
+    el.addEventListener('mouseenter', click);
+    el.addEventListener('focus', click);
+    el.addEventListener('touchstart', click, {passive:true});
+  });
+})();
+</script>
+
+
+
+
+
 </body></html>
