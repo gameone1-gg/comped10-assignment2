@@ -178,7 +178,10 @@ footer{line-height:1.8}
 </main>
 <footer class="wrap"><br>Sources: Promise Legal (COPPA, June 2026); KPMG Law (Google Fonts, Sept 2022); Consently (session replay, July 2026) and Warner Norcross &amp; Judd; Prospeo (CAN-SPAM, 2026); American Bar Association (auto-renewal law, 2022); Jaburg Wilk (DMCA agent); <a href="https://mbasic.facebook.com/privacy/policy/printable/version/26776488768644674/" target="_blank" rel="noopener" style="color:var(--cy);text-decoration:underline">Meta Privacy Policy (effective July 23, 2026; covers Facebook, Instagram, Messenger and AI at Meta)</a>; TechCrunch and Open Terms Archive (AI update). Laws and policies change and court rulings differ, so this is general information, not legal advice. Check the live Meta Privacy Policy for its current version. The font is hosted inside this page, so it sends no visitor IP address to Google. The only outside request is the optional music player: nothing is loaded from YouTube until you press "Music", and when you do, YouTube (a Google service) receives your IP address, like any embedded video.</footer>
 
-<button id="soundBtn" class="btn" aria-pressed="false" style="--c:var(--pu);position:fixed;right:16px;bottom:72px;z-index:50;cursor:pointer;color:#fff;font-family:var(--game)">Mute sounds</button>
+<div id="ctrls" style="position:fixed;right:16px;bottom:16px;z-index:50;display:flex;flex-direction:column;align-items:stretch;gap:10px">
+  <button id="soundBtn" class="btn" aria-pressed="false" style="--c:var(--pu);cursor:pointer;color:#fff;font-family:var(--game)">Mute sounds</button>
+  <button id="musicBtn" class="btn" style="--c:var(--cy);cursor:pointer;color:#fff;font-family:var(--game)">Music: off</button>
+</div>
 <script>
 (function(){
   var ctx;
@@ -244,7 +247,7 @@ footer{line-height:1.8}
 </script>
   
 <div id="ytwrap" style="position:fixed;left:16px;bottom:16px;z-index:50;width:200px;height:200px;display:none"><div id="ytp"></div></div>
-<button id="musicBtn" class="btn" style="--c:var(--cy);position:fixed;right:16px;bottom:16px;z-index:50;cursor:pointer;color:#fff;font-family:var(--game)">Music: off</button>
+
 <script>
 (function(){
   var VIDEO = 'JIJ1F_y_ZkU';
