@@ -140,17 +140,12 @@ footer{line-height:1.8}
   width:max-content;
   margin:20px auto 14px;
   transform-origin:center;
-  animation:playPulse 1.5s infinite;
+  animation:playPulse 1.3s ease-in-out infinite;
   will-change:transform,opacity,filter;
 }
 @keyframes playPulse{
-  0%   {transform:scale(1);    opacity:1;   filter:blur(0);
-        animation-timing-function:cubic-bezier(.5,0,.9,.6)}
-  24%  {transform:scale(1.12); opacity:.65; filter:blur(1px);
-        animation-timing-function:linear}
-  44%  {transform:scale(1.12); opacity:.62; filter:blur(1px);
-        animation-timing-function:cubic-bezier(.1,.6,.3,1)}
-  75%,100%{transform:scale(1); opacity:1;   filter:blur(0)}
+  0%,100%{transform:scale(1);    opacity:1;   filter:blur(0)}
+  50%    {transform:scale(1.12); opacity:.65; filter:blur(1px)}
 }
 @media (prefers-reduced-motion:reduce){
   .play{animation:none}
