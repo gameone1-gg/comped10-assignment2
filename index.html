@@ -304,7 +304,12 @@ footer{line-height:1.8}
 })();
 </script>
   
-<div id="ytwrap" style="position:fixed;left:16px;bottom:16px;z-index:50;width:200px;height:200px;display:none"><div id="ytp"></div></div>
+<div id="ytwrap" style="position:fixed;left:16px;bottom:16px;z-index:50;width:200px;display:none;background:#000">
+  <div id="ytp"></div>
+  <div style="display:flex;align-items:center;gap:8px;padding:6px 10px;font-family:var(--game);color:#fff;font-size:1.1rem;background:#080b26">
+    Vol <input id="volSlider" type="range" min="0" max="100" value="30" aria-label="Music volume" style="flex:1;min-width:0;accent-color:var(--cy);cursor:pointer">
+  </div>
+</div>
 
 <script>
 (function(){
@@ -313,7 +318,18 @@ footer{line-height:1.8}
   var state = 0;            // 0 = not loaded, 1 = loading, 2 = ready
   var btn  = document.getElementById('musicBtn');
   var wrap = document.getElementById('ytwrap');
+  
+  var vol = 30;
+var slider = document.getElementById('volSlider');
+slider.addEventListener('input', function(){
+  vol = +slider.value;
+  if (player && state === 2) {
+    player.setVolume(vol);
+    if (vol > 0 && !window.soundsMuted) player.unMute();
+  }
+});
 
+  
     // Lets the "Mute sounds" button mute or unmute the music too
   window.setMusicMuted = function(m){
     if (player && state === 2) { m ? player.mute() : player.unMute(); }
@@ -329,7 +345,7 @@ footer{line-height:1.8}
       events: {
                 onReady: function(e){
           state = 2;
-          e.target.setVolume(30);
+         e.target.setVolume(vol);
           if (window.soundsMuted) e.target.mute();   // respect the mute choice
           e.target.playVideo();
       
