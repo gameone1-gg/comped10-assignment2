@@ -150,8 +150,12 @@ footer{line-height:1.8}
 @media (prefers-reduced-motion:reduce){
   .play{animation:none}
 }
+.menu-link{position:fixed;top:14px;right:14px;z-index:60;font-family:var(--game);font-size:1.3rem;color:#fff;text-decoration:none;background:rgba(0,0,0,.55);border:3px solid var(--cy);padding:4px 18px;transition:transform .12s ease,background .12s ease}
+.menu-link:hover{background:var(--cy);color:#000;transform:translateY(-3px) rotate(-3deg)}
+</style>
 
-</style></head><body>
+</head><body>
+  <a href="index.html" class="menu-link">Menu</a>
 
 <div class="bar"><div class="wrap"><div class="hud">
 <div class="hud-main">
