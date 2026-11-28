@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 4</title>
+  <style>
+    /* Your pixel font. Upload font2.ttf to the repo next to this file. */
+    @font-face {
+      font-family: "SiteFont";
+      src: url("font2.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #141312;
+      --card: #1c1c1c;
+      --text: #ffffff;
+      --muted: #cfcfcf;
+      --accent: #e0a800;   /* Assignment 4 gold, same as its card on the menu */
+      --font: "SiteFont", "Courier New", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px 16px 48px;
+      background: linear-gradient(#211e1b, #111);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+    }
+
+    .menu-btn {
+      display: inline-block;
+      padding: 8px 18px;
+      background: var(--accent);
+      color: #000;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    .menu-btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+    h1 {
+      margin: 24px 0 8px;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: normal;
+      color: var(--accent);
+    }
+
+    p.intro {
+      max-width: 60ch;
+      margin: 0 0 24px;
+      color: var(--muted);
+    }
+
+    .embed-card {
+      max-width: 1088px;
+      margin: 0 auto;
+      padding: 12px;
+      background: var(--card);
+      border-top: 4px solid var(--accent);
+      border-radius: 12px;
+    }
+
+    /* Makes the iframe shrink on small screens instead of overflowing */
+    .embed-card iframe {
+      display: block;
+      width: 100%;
+      max-width: 1088px;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="menu-btn" href="index.html">Menu</a>
+
+  <h1>Assignment 4</h1>
+  <p class="intro">Understanding Digital Footprint and Privacy Settings (Group 94, OER).</p>
+
+  <div class="embed-card">
+    <iframe src="https://compedgrp94.h5p.com/content/1293071304598461879/embed" aria-label="Understanding Digital Footprint and Privacy Settings | Group 94 | OER" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
+    <script src="https://compedgrp94.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+  </div>
+
+</body>
+</html>
