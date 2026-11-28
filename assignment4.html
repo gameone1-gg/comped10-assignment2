@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Assignment 4 - OER</title>
   <style>
+    /* Your pixel font. Upload font2.ttf to the repo next to this file. */
+    @font-face {
       font-family: "SiteFont";
       src: url("font2.ttf") format("truetype");
       font-weight: normal;
@@ -12,16 +14,6 @@
       font-display: swap;
     }
 
-    :root {
-      --card: #1c1c1c;
-      --text: #ffffff;
-      --muted: #cfcfcf;
-      --accent: #e0a800;
-      --red: #ff4d6a;    
-      --font: "SiteFont", "Courier New", monospace;
-      --game: var(--font);
-      --cy: #29b6f6;       
-    }
 
     html { zoom: .66; }
 
@@ -31,8 +23,8 @@
       margin: 0;
       padding: 24px 16px 60px;
       background: linear-gradient(#2a2623, #161412 70%);
-      color: var(--text);
-      font-family: var(--font);
+      color: #ffffff;
+      font-family: "SiteFont", "Courier New", monospace;
       font-size: 1.2rem;
       line-height: 1.7;
       letter-spacing: .02em;
@@ -44,17 +36,17 @@
       top: 14px;
       right: 14px;
       z-index: 60;
-      font-family: var(--game);
+      font-family: "SiteFont", "Courier New", monospace;
       font-size: 1.3rem;
       color: #fff;
       text-decoration: none;
       background: rgba(0, 0, 0, .55);
-      border: 3px solid var(--cy);
+      border: 3px solid #29b6f6;
       padding: 4px 18px;
       transition: transform .12s ease, background .12s ease;
     }
     .menu-link:hover {
-      background: var(--cy);
+      background: #29b6f6;
       color: #000;
       transform: translateY(-3px) rotate(-3deg);
     }
@@ -77,7 +69,7 @@
       max-width: 22em;
       font-size: clamp(1.4rem, 3vw, 2rem);
       font-weight: normal;
-      color: var(--red);
+      color: #ff4d6a;
       line-height: 1.5;
       letter-spacing: .04em;
     }
@@ -85,14 +77,14 @@
     p.intro {
       max-width: 70ch;
       margin: 0 0 24px;
-      color: var(--muted);
+      color: #cfcfcf;
     }
 
     .embed-card {
       margin: 0 0 32px;
       padding: 12px;
-      background: var(--card);
-      border: 4px solid var(--red);
+      background: #1c1c1c;
+      border: 4px solid #ff4d6a;
       border-radius: 12px;
     }
 
@@ -103,7 +95,7 @@
       color: #fff;
     }
 
-
+    /* Responsive 16:9 box for the YouTube video */
     .video-frame {
       position: relative;
       width: 100%;
@@ -123,7 +115,7 @@
     .embed-card li { margin-bottom: 4px; }
 
 
-    .embed-card a { color: var(--cy); }
+    .embed-card a { color: #29b6f6; }
     sup a { text-decoration: none; }
 
 
@@ -133,25 +125,26 @@
     .notes { padding-left: 1.6em; }
 
 
-    .refs h4 { margin: 24px 0 8px; font-size: 1.2rem; font-weight: normal; color: var(--red); }
+    .refs h4 { margin: 24px 0 8px; font-size: 1.2rem; font-weight: normal; color: #ff4d6a; }
     .more-sources { list-style: none; padding-left: 0; }
     .more-sources li { margin-bottom: 10px; word-break: break-word; }
 
 
+    /* Jumping to a reference leaves breathing room above it and highlights it */
     html { scroll-behavior: smooth; }
     #references p, #references li { scroll-margin-top: 140px; }
     #references :target {
       background: rgba(255, 77, 106, .18);
-      outline: 2px solid var(--red);
+      outline: 2px solid #ff4d6a;
       outline-offset: 6px;
     }
 
     .source {
       margin: 10px 0 0;
       font-size: 1rem;
-      color: var(--muted);
+      color: #cfcfcf;
     }
-    .source a { color: var(--cy); }
+    .source a { color: #29b6f6; }
 
     .embed-card iframe.h5p {
       display: block;
