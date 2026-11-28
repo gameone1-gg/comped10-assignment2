@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Assignment 4 - OER</title>
   <style>
-
+    /* Your pixel font. Upload font2.ttf to the repo next to this file. */
     @font-face {
       font-family: "SiteFont";
       src: url("font2.ttf") format("truetype");
@@ -19,10 +19,10 @@
       --text: #ffffff;
       --muted: #cfcfcf;
       --accent: #e0a800;
-      --red: #ff4d6a;      
+      --red: #ff4d6a;      /* light crimson red used for the outlines */
       --font: "SiteFont", "Courier New", monospace;
       --game: var(--font);
-      --cy: #29b6f6;      
+      --cy: #29b6f6;       /* cyan, replace with your --cy value from index.html */
     }
 
     html { zoom: .66; }
@@ -103,7 +103,7 @@
       color: #fff;
     }
 
-
+    /* Responsive 16:9 box for the YouTube video */
     .video-frame {
       position: relative;
       width: 100%;
@@ -116,6 +116,26 @@
       height: 100%;
       border: 0;
     }
+
+
+    .embed-card p { margin: 0 0 12px; }
+    .embed-card ul, .embed-card ol { margin: 0 0 12px; padding-left: 1.6em; }
+    .embed-card li { margin-bottom: 4px; }
+
+
+    .embed-card a { color: var(--cy); }
+    sup a { text-decoration: none; }
+
+
+    .embed-card li b { color: #fff; font-weight: normal; font-size: 1.3rem; }
+    .refs p, .notes li { word-break: break-word; }
+    .refs p { padding-left: 2em; text-indent: -2em; }
+    .notes { padding-left: 1.6em; }
+
+
+    .refs h4 { margin: 24px 0 8px; font-size: 1.2rem; font-weight: normal; color: var(--red); }
+    .more-sources { list-style: none; padding-left: 0; }
+    .more-sources li { margin-bottom: 10px; word-break: break-word; }
 
     .source {
       margin: 10px 0 0;
@@ -137,10 +157,26 @@
   <a class="menu-link" href="index.html">Menu</a>
 
   <div class="wrap">
-    <h1>Assignment 4</h1>
+    <h1>Assignment 4 - OER</h1>
 
-    <h2>H5P Learning Object</h2>
-    <p class="intro">A short 10-question situation-based quiz made through H5P, testing the learner’s knowledge in cybersecurity literacy through their understanding of Digital Footprint and Privacy Settings, accompanied by a 5-minute video animation.</p>
+    <h2>Your Privacy, Your Choice: Understanding Digital Footprint and Privacy Settings</h2>
+
+    <div class="embed-card">
+      <h3>1. Learning Objectives</h3>
+      <p>By the end of this activity, the learner is expected to be able to:</p>
+      <ol>
+        <li>Define what is a Digital Footprint.</li>
+        <li>Discern the two types of digital footprint and its examples.</li>
+        <li>Understand what and how to use Privacy Settings.</li>
+        <li>Encourage cybersecurity literacy among other online users, especially UPOU students.</li>
+      </ol>
+    </div>
+
+    <div class="embed-card">
+      <h3>2. Description</h3>
+      <p><b>H5P Learning Object</b></p>
+      <p>A short 10-question situation-based quiz made through H5P, testing the learner’s knowledge in cybersecurity literacy through their understanding of Digital Footprint and Privacy Settings, accompanied by a 5-minute video animation.</p>
+    </div>
 
     <div class="embed-card">
       <h3>Video Animation</h3>
@@ -156,8 +192,45 @@
       <script src="https://compedgrp94.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
       <p class="source license"><a href="https://compedgrp94.h5p.com/content/1293071304598461879">Understanding Digital Footprint and Privacy Settings | Group 94 | OER</a> © 2026 by <a href="https://docs.google.com/document/d/1hRzE8P-L-JHqWgwTdXMFqpFMi-OAFL0meuI_hKR8wfA/edit?usp=sharing">Camson, K. A., Esperanza, J. F.,  Quiba, L. S., Rabonza, C. K.</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></p>
     </div>
+
+    <div class="embed-card">
+      <h3>3. Rationale</h3>
+      <p>As a university that provides open and distance learning, the University of the Philippines — Open University (UPOU) provides most of its services online. From online learning, to transactions online, UPOU—especially its students—are bound to be vulnerable to breaches in their cybersecurity. With the increasing concern on digital literacy and the rise of Artificial Intelligence at an alarming rate, it has become more complicated for users of the digital world to protect themselves from the dangers it holds. As ICTDO Director, Assoc. Prof. Reynold Adrian Pugoy (2026) puts it, “I believe that UPOU students should be the most cyber security literate students in the country. Not only in the country but in the world because we are in the digital space, ’di ba. I mean our classes are online. The transactions are being done online.”<sup><a href="#ref1">1</a></sup></p>
+      <p>The aim of this Open Educational Resource (OER) is to inform fellow UPOU students of the concept of digital footprint; alongside understanding the use of privacy settings in navigating digital platforms. Not only does it aim to define, but to further expand upon the capabilities and limitations through learning and testing one’s knowledge in cyber security literacy in today’s day and age.</p>
+    </div>
+
+
+    <div class="embed-card refs" id="references">
+      <h3>References</h3>
+      <p>Amazon Web Services. (n.d.). <i>What is data porting?</i> AWS. Retrieved November 21, 2026, from <a href="https://aws.amazon.com/what-is/data-porting/" target="_blank" rel="noopener">https://aws.amazon.com/what-is/data-porting/</a></p>
+      <p>Asian Development Bank. (n.d.). <i>Data Privacy Act of 2012, Republic Act No. 10173 (Philippines)</i>. ADB. Retrieved November 21, 2026, from <a href="https://lpr.adb.org/resource/data-privacy-act-2012-republic-act-no-10173-philippines" target="_blank" rel="noopener">https://lpr.adb.org/resource/data-privacy-act-2012-republic-act-no-10173-philippines</a></p>
+      <p>Federal Trade Commission. (n.d.). <i>Children’s Online Privacy Protection Rule (“COPPA”)</i>. Federal Trade Commission. Retrieved November 21, 2026, from <a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa" target="_blank" rel="noopener">https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa</a></p>
+      <p>Fortinet. (n.d.-a). <i>What is a data breach?</i> Fortinet. Retrieved November 21, 2026, from <a href="https://www.fortinet.com/resources/cyberglossary/data-breach" target="_blank" rel="noopener">https://www.fortinet.com/resources/cyberglossary/data-breach</a></p>
+      <p>Fortinet. (n.d.-b). <i>What is an IP address? How does it work?</i> Fortinet. Retrieved November 21, 2026, from <a href="https://www.fortinet.com/resources/cyberglossary/what-is-ip-address" target="_blank" rel="noopener">https://www.fortinet.com/resources/cyberglossary/what-is-ip-address</a></p>
+      <p>Kaspersky. (n.d.). <i>What is a digital footprint? How to reduce yours and protect your privacy</i>. Kaspersky. Retrieved November 19, 2026, from <a href="https://www.kaspersky.com/resource-center/definitions/what-is-a-digital-footprint" target="_blank" rel="noopener">https://www.kaspersky.com/resource-center/definitions/what-is-a-digital-footprint</a></p>
+      <p>Kosinski, M. (n.d.). <i>What is phishing?</i> IBM. Retrieved November 21, 2026, from <a href="https://www.ibm.com/think/topics/phishing" target="_blank" rel="noopener">https://www.ibm.com/think/topics/phishing</a></p>
+      <p>Merriam-Webster. (n.d.-a). Cache. In <i>Merriam-Webster.com dictionary</i>. Retrieved November 21, 2026, from <a href="https://www.merriam-webster.com/dictionary/cache" target="_blank" rel="noopener">https://www.merriam-webster.com/dictionary/cache</a></p>
+      <p>Merriam-Webster. (n.d.-b). Data. In <i>Merriam-Webster.com dictionary</i>. Retrieved November 21, 2026, from <a href="https://www.merriam-webster.com/dictionary/data" target="_blank" rel="noopener">https://www.merriam-webster.com/dictionary/data</a></p>
+      <p>Merriam-Webster. (n.d.-c). Metadata. In <i>Merriam-Webster.com dictionary</i>. Retrieved November 21, 2026, from <a href="https://www.merriam-webster.com/dictionary/metadata" target="_blank" rel="noopener">https://www.merriam-webster.com/dictionary/metadata</a></p>
+      <p>NHI Mgmt Group. (n.d.). <i>Privacy settings</i>. Non-Human Identity Management Group. Retrieved November 19, 2026, from <a href="https://nhimg.org/glossary/privacy-settings/" target="_blank" rel="noopener">https://nhimg.org/glossary/privacy-settings/</a></p>
+      <p id="ref1">Pugoy, R. A. (2026). <i>UPOU Student Orientation 2026</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=Kv-SqaEAuCs" target="_blank" rel="noopener">https://www.youtube.com/watch?v=Kv-SqaEAuCs</a></p>
+      <p>Robinson, F. P. (1946). <i>Effective study</i>. Harper &amp; Brothers.</p>
+      <p>VA. (2020). <i>Securing your data: Give your devices a privacy checkup</i>. VA.gov. Retrieved November 22, 2026, from <a href="https://news.va.gov/76685/securing-data-give-devices-privacy-checkup/" target="_blank" rel="noopener">https://news.va.gov/76685/securing-data-give-devices-privacy-checkup/</a></p>
+      <p>Worldpay. (n.d.). <i>How safe are guest checkouts?</i> Worldpay. Retrieved November 21, 2026, from <a href="https://www.worldpay.com/en/insights/articles/how-safe-are-guest-checkouts" target="_blank" rel="noopener">https://www.worldpay.com/en/insights/articles/how-safe-are-guest-checkouts</a></p>
+      <h4>Additional sources</h4>
+      <ul class="more-sources">
+        <li><b>AI reverse engineering:</b><br><a href="https://www.scientificamerican.com/article/an-exclusive-conversation-with-the-developer-of-rea-the-viral-ai-reverse-engineering-tool/" target="_blank" rel="noopener">https://www.scientificamerican.com/article/an-exclusive-conversation-with-the-developer-of-rea-the-viral-ai-reverse-engineering-tool/</a></li>
+        <li><b>Wi-Fi sensing:</b><br><a href="https://publications.ri.cmu.edu/dense-human-pose-estimation-from-wifi" target="_blank" rel="noopener">https://publications.ri.cmu.edu/dense-human-pose-estimation-from-wifi</a><br><a href="https://www.techradar.com/computing/wi-fi-broadband/these-wi-fi-routers-can-help-detect-motion-in-your-home-but-are-also-sparking-privacy-worries-heres-why" target="_blank" rel="noopener">https://www.techradar.com/computing/wi-fi-broadband/these-wi-fi-routers-can-help-detect-motion-in-your-home-but-are-also-sparking-privacy-worries-heres-why</a><br><a href="https://github.com/ruvnet/ruview" target="_blank" rel="noopener">https://github.com/ruvnet/ruview</a></li>
+        <li><b>AI voice cloning:</b><br><a href="https://www.microsoft.com/en-us/research/project/vall-e-x/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/project/vall-e-x/</a></li>
+        <li><b>Blurred faces and AI:</b><br><a href="https://arxiv.org/html/2506.12344v1" target="_blank" rel="noopener">https://arxiv.org/html/2506.12344v1</a></li>
+        <li><b>MIT shield against AI photo edits:</b><br><a href="https://news.mit.edu/index%2ephp/2023/using-ai-protect-against-ai-image-manipulation-0731" target="_blank" rel="noopener">https://news.mit.edu/index%2ephp/2023/using-ai-protect-against-ai-image-manipulation-0731</a></li>
+        <li><b>Recovering sound via wireless signals:</b><br><a href="https://arxiv.org/html/2108.03164.pdf" target="_blank" rel="noopener">https://arxiv.org/html/2108.03164.pdf</a></li>
+        <li><b>Passwords via keyboard sounds:</b><br><a href="https://www.schneier.com/blog/archives/2023/08/using-machine-learning-to-detect-keystrokes.html" target="_blank" rel="noopener">https://www.schneier.com/blog/archives/2023/08/using-machine-learning-to-detect-keystrokes.html</a><br><a href="https://www.bitdefender.com/en-gb/blog/hotforsecurity/new-deep-learning-model-can-steal-data-from-sound-of-keystrokes" target="_blank" rel="noopener">https://www.bitdefender.com/en-gb/blog/hotforsecurity/new-deep-learning-model-can-steal-data-from-sound-of-keystrokes</a></li>
+        <li><b>Local abliterated machine learning models:</b><br><a href="https://www.npr.org/2026/05/31/nx-s1-5816391/ai-safety-concerns-danger-open-weight-models-risks" target="_blank" rel="noopener">https://www.npr.org/2026/05/31/nx-s1-5816391/ai-safety-concerns-danger-open-weight-models-risks</a></li>
+        <li><b>Open source “educational” repositories used to exploit:</b><br><a href="https://arxiv.org/pdf/2403.04419" target="_blank" rel="noopener">https://arxiv.org/pdf/2403.04419</a></li>
+      </ul>
+    </div>
   </div>
 
 </body>
 </html>
-
