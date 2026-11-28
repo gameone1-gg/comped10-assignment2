@@ -15,26 +15,29 @@
     }
 
     :root {
-      --bg: #141312;
       --card: #1c1c1c;
       --text: #ffffff;
       --muted: #cfcfcf;
-      --accent: #e0a800;   /* Assignment 4 gold, same as its card on the menu */
+      --accent: #e0a800;
+      --red: #ff4d6a;      /* light crimson red used for the outlines */
       --font: "SiteFont", "Courier New", monospace;
       --game: var(--font);
-      --cy: #29b6f6;       /* cyan, same as the Assignment 2 card. Replace with your --cy value from index.html */
+      --cy: #29b6f6;       /* cyan, replace with your --cy value from index.html */
     }
 
-    html { zoom: .66; }    /* same as the rest of your site */
+    html { zoom: .66; }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      padding: 24px 16px 48px;
-      background: linear-gradient(#211e1b, #111);
+      padding: 24px 16px 60px;
+      background: linear-gradient(#2a2623, #161412 70%);
       color: var(--text);
       font-family: var(--font);
+      font-size: 1.2rem;
+      line-height: 1.7;
+      letter-spacing: .02em;
       min-height: 100vh;
     }
 
@@ -59,6 +62,8 @@
     }
     .menu-link:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 
+    .wrap { max-width: 1100px; margin: 0 auto; }
+
     h1 {
       margin: 24px 0 8px;
       font-size: clamp(2rem, 6vw, 4rem);
@@ -66,27 +71,60 @@
       color: #fff;
       text-transform: uppercase;
       line-height: 1.1;
-      /* hard black shadow stacked a few pixels down-right, like Assignment 3 */
       text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000;
     }
 
+    h2 {
+      margin: 32px 0 8px;
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: normal;
+      color: var(--red);
+      line-height: 1.2;
+    }
+
     p.intro {
-      max-width: 60ch;
+      max-width: 70ch;
       margin: 0 0 24px;
       color: var(--muted);
     }
 
     .embed-card {
-      max-width: 1088px;
-      margin: 0 auto;
+      margin: 0 0 32px;
       padding: 12px;
       background: var(--card);
-      border-top: 4px solid var(--accent);
+      border: 4px solid var(--red);
       border-radius: 12px;
     }
 
-    /* Makes the iframe shrink on small screens instead of overflowing */
-    .embed-card iframe {
+    .embed-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #fff;
+    }
+
+    /* Responsive 16:9 box for the YouTube video */
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .source {
+      margin: 10px 0 0;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+    .source a { color: var(--cy); }
+
+    .embed-card iframe.h5p {
       display: block;
       width: 100%;
       max-width: 1088px;
@@ -98,12 +136,26 @@
 
   <a class="menu-link" href="index.html">Menu</a>
 
-  <h1>Assignment 4</h1>
-  <p class="intro">Understanding Digital Footprint and Privacy Settings (Group 94, OER).</p>
+  <div class="wrap">
+    <h1>Assignment 4</h1>
 
-  <div class="embed-card">
-    <iframe src="https://compedgrp94.h5p.com/content/1293071304598461879/embed" aria-label="Understanding Digital Footprint and Privacy Settings | Group 94 | OER" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
-    <script src="https://compedgrp94.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+    <h2>H5P Learning Object</h2>
+    <p class="intro">A short 10-question situation-based quiz made through H5P, testing the learner’s knowledge in cybersecurity literacy through their understanding of Digital Footprint and Privacy Settings, accompanied by a 5-minute video animation.</p>
+
+    <div class="embed-card">
+      <h3>Video Animation</h3>
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/xcCLpH215SI" title="Digital Footprint and Privacy Settings video animation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <p class="source">Source: <a href="https://www.youtube.com/watch?v=xcCLpH215SI" target="_blank" rel="noopener">Watch on YouTube</a></p>
+    </div>
+
+    <div class="embed-card">
+      <h3>10-Question Quiz</h3>
+      <iframe class="h5p" src="https://compedgrp94.h5p.com/content/1293071304598461879/embed" aria-label="Understanding Digital Footprint and Privacy Settings | Group 94 | OER" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
+      <script src="https://compedgrp94.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+      <p class="source">Source: Group 94, CompEd 10, made with H5P.</p>
+    </div>
   </div>
 
 </body>
